@@ -1,0 +1,34 @@
+body {
+  background-color: rgb(18, 26, 22);
+  height: 200vh;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    font-size: xx-large;
+    font-weight: bold;
+  }
+
+  input {
+    height: 10vh;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .card {
+    height: 99.5vh;
+  }
+
+  .btn {
+    height: 16vh;
+    font-size: larger;
+  }
+
+  .btn-dark {
+    height: 13.8vh;
+  }
+}

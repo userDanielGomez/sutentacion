@@ -1,0 +1,26 @@
+/*sd*/
+@media (max-width: 576px) {
+  /* Cambia a filas cuando la pantalla es de tamaño "sm" o menor */
+  @media (max-width: 576px) {
+    .row {
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+    }
+
+    .col {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+/*tamaño mediano*/
+@media (min-width: 576px) and (max-width: 992px) {
+  .container {
+    background-color: rgb(212, 255, 220);
+  }
+  .dos {
+    height: 50vh !important;
+  }
+}

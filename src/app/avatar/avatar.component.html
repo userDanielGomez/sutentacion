@@ -1,0 +1,284 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiCalculadora</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-0">
+      <div class="row justify-content-center">
+        <div class="col-md-12">
+          <div class="card" style="font-weight: bold; margin-top: 0rem">
+            <div
+              class="card-body"
+              style="background-color: #2b4d56; min-height: max-content"
+            >
+              <h2 class="title text-center">Calculadora Estandar</h2>
+
+              <input
+                type="text"
+                id="display"
+                class="form-control mb-4"
+                [value]="input"
+                readonly
+              />
+
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          margin-top: 1vh;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('7')"
+                      >
+                        7
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          margin-top: 1vh;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('8')"
+                      >
+                        8
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          margin-top: 1vh;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('9')"
+                      >
+                        9
+                      </button>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('4')"
+                      >
+                        4
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('5')"
+                      >
+                        5
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('6')"
+                      >
+                        6
+                      </button>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('1')"
+                      >
+                        1
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('2')"
+                      >
+                        2
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('3')"
+                      >
+                        3
+                      </button>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col col-md-6">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('0')"
+                      >
+                        0
+                      </button>
+                    </div>
+                    <div class="col col-md-6">
+                      <button
+                        class="btn btn-block"
+                        style="
+                          font-weight: bold;
+                          color: #ffffff;
+                          background-color: #363258;
+                        "
+                        (click)="sendValue('.')"
+                      >
+                        .
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <!--Operaciones-->
+
+                <div class="col-md-4">
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 1vh"
+                        (click)="sendValue('+')"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 1vh"
+                        (click)="sendValue('-')"
+                      >
+                        -
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        (click)="sendValue('/')"
+                      >
+                        /
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        (click)="sendValue('*')"
+                      >
+                        x
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        (click)="clear()"
+                      >
+                        C
+                      </button>
+                    </div>
+                    <div class="col">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        (click)="delete()"
+                      >
+                        Del
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-12">
+                      <button
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        (click)="result('=')"
+                      >
+                        =
+                      </button>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col col-md-12">
+                      <a
+                        class="btn btn-dark btn-block"
+                        style="font-weight: bold; margin-top: 0.5rem"
+                        href="sustentation"
+                        >Sustentación</a
+                      >
+                    </div>
+                  </div>
+                  <br />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
